@@ -1,36 +1,422 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-  <meta name="google-site-verification" content="googlec6d4a162bcddc2ea" />
-  <meta http-equiv="Refresh" content="0; url=https://sites.google.com/view/chinyicheng/home" />
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Redirecting..." />
-  <meta property="og:description" content="Redirect to the official site." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/YijiaStudio/ChinYiCheng/main/Yijia-05.png" />
-  <meta property="og:url" content="https://sites.google.com/view/chinyicheng/home" />
-  <meta property="og:type" content="website" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="googlec6d4a162bcddc2ea">
+  <meta name="description" content="Chin Yi-Cheng 秦翊誠｜雕塑、人機協作與參數美學 Portfolio">
+  <meta property="og:title" content="Chin Yi-Cheng｜Portfolio">
+  <meta property="og:description" content="雕塑、人機協作與參數美學">
+  <meta property="og:image" content="Yijia-05.png">
+  <meta property="og:type" content="website">
+  <title>Chin Yi-Cheng｜Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg: #14171c;
+      --bg-2: #1c2129;
+      --ink: #e8ebe6;
+      --muted: #9aa19a;
+      --line: rgba(232, 235, 230, 0.14);
+      --accent: #c4a574;
+      --max: 920px;
     }
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1000px; /* 調整圖片大小 */
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      color: var(--ink);
+      font-family: "Noto Sans TC", sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      background:
+        radial-gradient(1200px 700px at 18% -10%, rgba(196, 165, 116, 0.16), transparent 55%),
+        radial-gradient(900px 600px at 90% 20%, rgba(90, 120, 140, 0.18), transparent 50%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 45%, #10131a 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      width: min(var(--max), calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 0 0 5rem;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-content: center;
+      gap: 1.4rem;
+      padding: 4rem 0 3rem;
+      animation: rise 1s ease both;
+    }
+
+    .brand-mark {
+      width: min(220px, 48vw);
       height: auto;
+      filter: invert(1);
+      opacity: 0.92;
+      animation: floaty 7s ease-in-out infinite;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", "Noto Serif TC", serif;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      line-height: 1.05;
+    }
+
+    .hero .role {
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-style: italic;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero .lede {
+      max-width: 34rem;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem 1.2rem;
+      margin-top: 0.6rem;
+    }
+
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 3.2rem 0 0.5rem;
+      border-top: 1px solid var(--line);
+      animation: rise 0.9s ease both;
+      animation-delay: 0.12s;
+    }
+
+    section h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.4rem;
+      color: var(--accent);
+    }
+
+    .edu, .job {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto;
+      gap: 0.6rem 1rem;
+      align-items: baseline;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(232, 235, 230, 0.06);
+      font-size: 0.95rem;
+    }
+
+    .row .school { font-weight: 400; }
+    .row .dept { color: var(--muted); }
+    .row .year {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .research {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .research h3 {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+      font-weight: 500;
+    }
+
+    .research p {
+      font-size: 1.02rem;
+      max-width: 42rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .tags span {
+      display: inline-block;
+      padding: 0.28rem 0.7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .exhibits {
+      list-style: none;
+      display: grid;
+      gap: 0.95rem;
+    }
+
+    .exhibits li {
+      display: grid;
+      grid-template-columns: 3.4rem 1fr;
+      gap: 0.9rem;
+      align-items: start;
+      font-size: 0.94rem;
+    }
+
+    .exhibits .y {
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.04em;
+      padding-top: 0.1rem;
+    }
+
+    .exhibits .t { color: var(--ink); }
+    .exhibits .m {
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-top: 0.15rem;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    @media (max-width: 720px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
+        padding: 0.75rem 0;
+      }
+      .row .year { order: -1; font-size: 0.82rem; }
+      .exhibits li { grid-template-columns: 3rem 1fr; }
     }
   </style>
-
-  <title>Redirecting...</title>
 </head>
 <body>
-  <!-- 左上角圖片 -->
-  <img src="https://raw.githubusercontent.com/YijiaStudio/ChinYiCheng/main/Yijia-05.png" alt="過日子-創作 Chin Yi-Cheng" />
+  <div class="wrap">
+    <header class="hero">
+      <img class="brand-mark" src="Yijia-05.png" alt="Yijia">
+      <h1>Chin Yi-Cheng</h1>
+      <p class="role">Portfolio</p>
+      <p class="lede">雕塑與人機協作實踐。以生成媒介探索造型開發，以及人與科技之間的互利協作。</p>
+      <nav class="toc" aria-label="頁面導覽">
+        <a href="#education">學習經歷</a>
+        <a href="#research">研究</a>
+        <a href="#work">工作經歷</a>
+        <a href="#exhibitions">展覽</a>
+      </nav>
+    </header>
 
-  <p><a href="https://sites.google.com/view/chinyicheng/home"></a>。</p>
+    <section id="education">
+      <h2>學習經歷</h2>
+      <div class="edu">
+        <div class="row">
+          <span class="school">國立臺灣藝術大學</span>
+          <span class="dept">雕塑學系</span>
+          <span class="year">2020</span>
+        </div>
+        <div class="row">
+          <span class="school">國立陽明交通大學</span>
+          <span class="dept">應用藝術研究所</span>
+          <span class="year">2024–</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>研究</h2>
+      <div class="research">
+        <div>
+          <h3>研究計畫</h3>
+          <p>建立基於生成式人工智慧的雕塑造型開發方法，並以創作實踐為例探索人與科技媒介間互利協作的藝術可能性。</p>
+        </div>
+        <div>
+          <h3>研究領域</h3>
+          <div class="tags">
+            <span>資訊參數／現象美學</span>
+            <span>人機協作／雕塑演算</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>工作經歷</h2>
+      <div class="job">
+        <div class="row">
+          <span class="school">美術教育機構</span>
+          <span class="dept">西畫、雕塑課程指導</span>
+          <span class="year">4 年</span>
+        </div>
+        <div class="row">
+          <span class="school">藝術工作室</span>
+          <span class="dept">金屬雕塑創作助手</span>
+          <span class="year">3 年</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="exhibitions">
+      <h2>展覽</h2>
+      <ul class="exhibits">
+        <li>
+          <span class="y">2025</span>
+          <div>
+            <div class="t">「存在的地層 Strata of Existence」聯展</div>
+            <div class="m">東梨學院藝文空間，台北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2020</span>
+          <div>
+            <div class="t">「毛序」畢業展</div>
+            <div class="m">國立台灣藝術大學，新北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2020</span>
+          <div>
+            <div class="t">台灣藝術大學雕塑年度展</div>
+            <div class="m">國立台灣藝術大學，新北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2020</span>
+          <div>
+            <div class="t">「浸·蛻」雕塑聯展</div>
+            <div class="m">新北市藝文中心，新北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2020</span>
+          <div>
+            <div class="t">「日」聯展</div>
+            <div class="m">稼咖啡，新北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2019</span>
+          <div>
+            <div class="t">「叢生」兩岸藝術院校優秀畢業作品聯展</div>
+            <div class="m">象山藝術公社，杭州，中國</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2019</span>
+          <div>
+            <div class="t">第十二屆亞洲青年木雕藝術研習營</div>
+            <div class="m">三義木雕博物館，苗栗，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2019</span>
+          <div>
+            <div class="t">「材質的存在 - 雕塑的對應與思考」金屬、木雕聯展</div>
+            <div class="m">心動藝術空間，台北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2019</span>
+          <div>
+            <div class="t">「極線」國立臺灣藝術大學雕塑系速寫雕塑聯展</div>
+            <div class="m">剝皮寮歷史街區，台北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2019</span>
+          <div>
+            <div class="t">台灣藝術大學雕塑年度展</div>
+            <div class="m">國立台灣藝術大學，新北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2018</span>
+          <div>
+            <div class="t">「合流點 · Nexus」邱靜宣／秦翊誠雙人雕塑聯展</div>
+            <div class="m">藝心美術教育機構，新北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2018</span>
+          <div>
+            <div class="t">第九屆國際袖珍雕塑展</div>
+            <div class="m">國立台灣藝術大學，新北市，台灣</div>
+          </div>
+        </li>
+        <li>
+          <span class="y">2017</span>
+          <div>
+            <div class="t">第八屆國際袖珍雕塑展</div>
+            <div class="m">國立台灣藝術大學，新北市，台灣</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>Chin Yi-Cheng · Yijia</footer>
+  </div>
 </body>
 </html>
