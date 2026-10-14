@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="googlec6d4a162bcddc2ea">
   <meta name="description" content="Chin Yi-Cheng 秦翊誠｜數位創作者。日耕禾耘，微光自在。">
   <meta property="og:title" content="Chin Yi-Cheng｜數位創作者">
   <meta property="og:description" content="日耕禾耘，微光自在。Finding joy and clarity in daily studio labor.">
   <meta property="og:image" content="Yijia-05.png">
   <meta property="og:type" content="website">
   <title>Chin Yi-Cheng｜Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #14171c;
@@ -22,6 +18,8 @@
       --line: rgba(232, 235, 230, 0.14);
       --accent: #c4a574;
       --max: 920px;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Songti TC", "Noto Serif TC", serif;
+      --sans: "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,7 +28,7 @@
 
     body {
       color: var(--ink);
-      font-family: "Noto Sans TC", sans-serif;
+      font-family: var(--sans);
       font-weight: 300;
       line-height: 1.7;
       background:
@@ -78,7 +76,7 @@
     }
 
     .hero h1 {
-      font-family: "Cormorant Garamond", "Noto Serif TC", serif;
+      font-family: var(--serif);
       font-size: clamp(2.8rem, 8vw, 5rem);
       font-weight: 500;
       letter-spacing: 0.04em;
@@ -87,7 +85,7 @@
 
     .hero .role {
       color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
+      font-family: var(--serif);
       font-size: clamp(1.2rem, 3vw, 1.6rem);
       font-style: italic;
       letter-spacing: 0.18em;
@@ -97,7 +95,7 @@
     .hero .lede {
       max-width: 34rem;
       color: var(--muted);
-      font-family: "Cormorant Garamond", "Noto Sans TC", serif;
+      font-family: var(--serif);
       font-size: 1.05rem;
       line-height: 1.75;
     }
@@ -165,7 +163,7 @@
     }
 
     section h2 {
-      font-family: "Cormorant Garamond", serif;
+      font-family: var(--serif);
       font-size: 1.7rem;
       font-weight: 500;
       letter-spacing: 0.12em;
