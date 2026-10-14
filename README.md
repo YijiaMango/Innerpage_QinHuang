@@ -1,6 +1,6 @@
 ﻿# QinHuang
 
-Chin Yi-Cheng Portfolio：學習經歷、研究、工作與展覽。
+創作名 QinHuang；介紹名 Chin Yi-Cheng／秦翊誠。數位創作者 Portfolio。
 
 ## 網址
 
