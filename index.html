@@ -121,6 +121,39 @@
       border-bottom-color: var(--accent);
     }
 
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.4rem;
+      margin-top: 0.35rem;
+    }
+
+    .socials a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .socials a:hover { color: var(--accent); }
+
+    .socials .label {
+      color: var(--muted);
+      opacity: 0.7;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-right: 0.15rem;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--accent); }
+
     /* Sections */
     section {
       padding: 3.2rem 0 0.5rem;
@@ -268,6 +301,10 @@
         <a href="#work">工作經歷</a>
         <a href="#exhibitions">展覽</a>
       </nav>
+      <p class="socials" aria-label="Instagram">
+        <a href="https://www.instagram.com/qinakira_/" target="_blank" rel="noopener noreferrer"><span class="label">IG</span> @qinakira_</a>
+        <a href="https://www.instagram.com/yijiamango_/" target="_blank" rel="noopener noreferrer"><span class="label">IG</span> @yijiamango_</a>
+      </p>
     </header>
 
     <section id="education">
@@ -416,7 +453,12 @@
       </ul>
     </section>
 
-    <footer>Chin Yi-Cheng · Yijia</footer>
+    <footer>
+      Chin Yi-Cheng · Yijia ·
+      <a href="https://www.instagram.com/qinakira_/" target="_blank" rel="noopener noreferrer">@qinakira_</a>
+      ·
+      <a href="https://www.instagram.com/yijiamango_/" target="_blank" rel="noopener noreferrer">@yijiamango_</a>
+    </footer>
   </div>
 </body>
 </html>
